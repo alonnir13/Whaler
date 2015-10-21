@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-// JavaScript Document
 
-/*
- * Module dependencies.
- */
-
-=======
->>>>>>> 466fe9e2505d93363af2ea97e8bd0380f975f20e
 var phonegap = require('../../lib/main'),
     CLI = require('../../lib/cli'),
     argv,
