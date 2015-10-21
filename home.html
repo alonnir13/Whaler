@@ -98,7 +98,7 @@ a:focus{
 
  
 
- <div id="wrapper" style="width:1080px; height:4210px;">
+ <div id="wrapper" style="width:1080px; height:4210px; overflow:hidden;">
 
   <div class="clearfix" id="page" style="clear:both; width:1080px; height:4210px;"><!-- group -->
   
@@ -241,6 +241,13 @@ $('.fav_btn').each(function(index, element) {
 </script>
 
 </div>
+
+<script>
+$('input').on('focus', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    window.scrollTo(0,0); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
+});
+</script>
 
    </body>
 </html>
