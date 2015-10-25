@@ -133,6 +133,7 @@ var __slice = [].slice,
       this.setSliderPositionFromValue(value);
       return this.valueChanged(value, ratio, "setRatio");
     };
+	
 
     SimpleSlider.prototype.setValue = function(value) {
       var ratio;
@@ -276,7 +277,7 @@ var __slice = [].slice,
       var idx, range, rawValue, step, steps;
       if (this.settings.equalSteps) {
         steps = this.settings.allowedValues.length;
-        step = Math.round(ratio * steps - 0.5);
+        step = Math.round(ratio * steps - 0);
         idx = Math.min(step, this.settings.allowedValues.length - 1);
         return this.settings.allowedValues[idx];
       } else {
