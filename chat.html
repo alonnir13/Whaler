@@ -59,17 +59,21 @@
 	float:left;
 }
 
-#send{
+#send[type=submit]{
 	width:100px;
 	height:100px;
 	border:none;
+	margin-top:10px;
+	margin-left:15px;
 	background:none;
 	z-index:999;
 	margin-bottom:110px;
-	overflow:visible;
+	background-image:url(images/send.png);
+	background-repeat:no-repeat;
 	
 	
 }
+
 
 #send:focus{
 	outline: 0;
@@ -122,7 +126,7 @@
     </div>
     <div id="my_msg">
         <input type="text" id="input_text">
-        <button id="send" value="Send" onClick="new_msg()"><img src="images/send.png"> </button>
+        <button id="send" value="Send" onClick="new_msg()" type="submit"></button>
     </div>
 </div>
 
