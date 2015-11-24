@@ -9,6 +9,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <link href="css/menu_style.css" type="text/css" rel="stylesheet">
 <preference name='phonegap-version' value='cli-5.1.1' />
+<link href="css/search_users.css" type="text/css" rel="stylesheet">
 
 
 
@@ -44,8 +45,8 @@
 }
 #filter{
 	    position:fixed;
-    left:20px;
-    top: 40px;
+     left:19px;
+    top: 200px;
     z-index:3;
 
 }
@@ -66,11 +67,21 @@
 	margin-top:525px;
 }
 
+img{
+	margin-bottom:15px;
+}
+
 </style>
 
 </head>
 
 <body>
+
+        <!--search users-->
+    <form id="demo-b">
+<input type="search" placeholder="Search users">
+</form>
+
 
 
 <div id="wrapper">
@@ -129,6 +140,122 @@
    
      <a href="#"><img src="img/wizard_list.jpg"></a>
    </div>
+   
+   
+      
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/black.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/ALX_list.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/dumpster.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/wizard_list.jpg"></a>
+   </div>
+
+
+     
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/black.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/ALX_list.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/dumpster.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/wizard_list.jpg"></a>
+   </div>
+   
+      
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/black.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/ALX_list.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/dumpster.jpg"></a>
+   </div>
+   
+   <div id="biscuit">
+   
+    <div  class="fav_wrapper">
+    	        <div><img  class="fav_btn" src="images/favorites_blank.png" width="95" height="90"></div>
+            </div>
+   
+     <a href="#"><img src="img/wizard_list.jpg"></a>
+   </div>
+
+
+  
 
 
   
@@ -171,7 +298,26 @@ $('.fav_btn').each(function(index, element) {
 		}
 	})
 });
+
+
+function update() {
+    if ($(window).scrollTop() > 50) {
+        $('#menu_wrapper').animate({
+            "bottom": '-200px'
+        }, 30);
+    } else {
+        $('#menu_wrapper').animate({
+            "bottom": '0px'
+        }, 30);
+    }
+}
+
+setInterval(update, 50);
 </script>
+
+
+
+
 
 </body>
 </html>

@@ -6,6 +6,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <link href="css/menu_style.css" type="text/css" rel="stylesheet">
 <preference name='phonegap-version' value='cli-5.2.0' />
+<link href="css/search_users.css" type="text/css" rel="stylesheet">
 
 
 <meta charset="utf-8">
@@ -89,8 +90,8 @@ margin-left:50px;
 }
 #filter{
 	    position:absolute;
-    left:20px;
-    top: 40px;
+    left:19px;
+    top: 200px;
     z-index:3;
 
 }
@@ -143,10 +144,7 @@ margin-left:50px;
 	margin-top:30px;
 }
 
-.additional_info img{
-	margin-top:30px;
-	width:100%;
-}
+
 
 .additional_info li{
 	float:left;
@@ -169,7 +167,16 @@ margin-left:50px;
 	z-index:999;
 }
 
+.product{
+	width:1080px;
+	height:556px;
+}
 
+.chat_after{
+	position:absolute;
+	top:1465px;
+	margin-left:300px;
+}
 
 
 
@@ -205,6 +212,14 @@ margin-left:50px;
 
 <div id="map_wrapper">
  <a href="#" id="filter"><img src="images/filter.png"></a>
+ 
+          <!--search users-->
+    <form id="demo-b">
+<input type="search" placeholder="Search users">
+</form>
+
+
+ 
   <img id="headline" src="images/headline.png"> 
    <div id="swap_to_list"><a href="list.html"><img src="images/list_link.png"></a></div>
 
@@ -216,8 +231,10 @@ margin-left:50px;
     
     <div id="bar">
      <button><img id="close_gallery" src="img/x.png" ></button>
-      <h1>5’4 28L al merrick biscuit</h1>
+      <h1>7.2 KM north</h1>
+    
         </div>
+        
     <div id="slider_img" style="width:1080px; background:#fff; z-index:9999; position:absolute"></div>
     <div id="slider-slick" style="background:#fff;">
       <div class="slick-slide" data-target="additional_info_0">
@@ -240,19 +257,26 @@ margin-left:50px;
       <h1><b>190$</b></h1>
       <h2>A like new 5’4ft 29L al merrick biscuit<br>Been in the water only several times.</h2>
         <h1><b>Contact alon</b></h1>
-        <img src="images/product_bg.jpg">
+        
+        
+        <img class="product_bg" src="images/product_bg.jpg">
+        <a href="chat.html"> <img class="chat_after" src="images/chat_after.png"></a>
+       
+       
            <ul>
              <li>Dings<br><h3>0</h3></li>
              <li>Heigth<br><h3>5'4</h3></li>
              <li>Volume<br><h3>29</h3></li>
            </ul>
+             
     </div>  
     <div class="additional_info" id="additional_info_1">
       
       <h1><b>198$</b></h1>
       <h2>A new 5’10ft 26.5L al merrick whip<br>Never been inside the water!!!</h2>
         <h1><b>Contact alon</b></h1>
-        <img src="images/product_bg.jpg">
+        <img class="product_bg" src="images/product_bg.jpg">
+        <a href="chat.html"> <img class="chat_after" src="images/chat_after.png"></a>
            <ul>
              <li>Dings<br><h3>0</h3></li>
              <li>Heigth<br><h3>5'10</h3></li>
@@ -265,7 +289,8 @@ margin-left:50px;
       <h1><b>120$</b></h1>
       <h2>A very good condition 5'8 ALX<br>amazing performance board!</h2>
         <h1><b>Contact alon</b></h1>
-        <img src="images/product_bg.jpg">
+        <img class="product_bg" src="images/product_bg.jpg">
+        <a href="chat.html"> <img class="chat_after" src="images/chat_after.png"></a>
            <ul>
              <li>Dings<br><h3>2</h3></li>
              <li>Heigth<br><h3>5'8</h3></li>
@@ -315,6 +340,7 @@ $(function(){
 				$('#filter').fadeOut(500);
 				$('#headline').fadeOut(500);
 				$('#swap_to_list').fadeOut(500);
+				$('input[type=search] ').fadeOut(500);
 				var info = '#'+$(this).data('target');
 				$('.additional_info').hide();
 				$(info).show();
@@ -323,6 +349,10 @@ $(function(){
 		})
     });
 })
+
+
+
+
 </script>
 <!--google map-->
 <script>
@@ -377,6 +407,7 @@ var refresh =
 		$('#filter').fadeIn(500);
 		$('#headline').fadeIn(500);
 		$('#swap_to_list').fadeIn(500);
+		$('input[type=search] ').fadeIn(500);
 		is_open = 0;
     });
 

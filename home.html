@@ -243,15 +243,19 @@ $('.fav_btn').each(function(index, element) {
 </div>
 
 <script>
-$(document).on('focus', 'input, textarea', function() 
-{
-	$.mobile.activePage.find("div[data-role='div']").hide();
-});
+function update() {
+    if ($(window).scrollTop() > 50) {
+        $('#menu_wrapper').animate({
+            "bottom": '-200px'
+        }, 30);
+    } else {
+        $('#menu_wrapper').animate({
+            "bottom": '0px'
+        }, 30);
+    }
+}
 
-$(document).on('blur', 'input, textarea', function() 
-{
-	$.mobile.activePage.find("div[data-role='div']").show();
-});
+setInterval(update, 50);
 </script>
 
    </body>

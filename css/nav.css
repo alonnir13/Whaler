@@ -8,11 +8,11 @@ section{
   height:175px;
   margin:50px auto;
 }
-nav{
+#lol{
   width:100%;
   padding-left:30px;
 }
-nav ul li{
+#lol ul li{
   display:inline-block;
   list-style:none;
   width:250px;
@@ -31,14 +31,14 @@ nav ul li{
    line-height:100px;
 }
 
-nav ul{
+#lol ul{
  
   position:absolute;
   width:100%;
   padding:0;
   z-index:100;
 }
-nav div{
+#lol div{
   position:absolute;
   left:87px;
   top:16px;

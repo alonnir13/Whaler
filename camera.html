@@ -14,12 +14,14 @@
 
 
 <style>
+
+
+
+
 #wrapper{
 	width:1080px;
 	height:1920px;
 	position:relative;
-	overflow:hidden;
-	width:inherit;
 }
 
 #menu{
@@ -31,6 +33,11 @@
 	position:fixed;
 	text-align:center;
 	line-height:575px;
+	z-index:999;
+}
+
+button:focus{
+	outline:0;
 }
 
 </style>
@@ -44,16 +51,16 @@
 
 <div id="menu"> 
 
-  <img src="img/dismiss_photo.png">
-  <button onClick="vidplay()"  id="stop" style="background:none; border:none;"><img src="img/take_photo.png" style="margin-left:220px;"></button>
-  <img src="img/approve_photo.png"  style="margin-left:220px;">
+  <a href="camera.html"><img id="dismiss_photo" src="img/dismiss_photo.png" style="visibility:hidden"></a>
+  <button onClick="takePicture()"  id="stop" style="background:none; border:none;"><img src="img/take_photo.png" style="margin-left:220px;"></button>
+  <a href="new_sale.html"><img id="approve_photo" src="img/approve_photo.png"  style="margin-left:220px; visibility:hidden;"></a>
 
 
 </div>
 
 <video id="video1" width="1080" height="1920" autoplay style="background:#D3D3D3;">
 
- <source src="video/Comp 1.mp4" type="video/mp4">
+ <source src="video/Comp1.mp4" type="video/mp4">
 
 
 </video>
@@ -75,6 +82,11 @@
           button.textContent = ">";
        }
     }
+	function takePicture() {
+		video1.pause();
+		document.getElementById('dismiss_photo').style.visibility = 'visible';
+		document.getElementById('approve_photo').style.visibility = 'visible';
+	}
 </script>
 
 </body>
