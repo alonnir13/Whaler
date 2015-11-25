@@ -7,7 +7,7 @@
 <!--css-->
 <link href="css/reset.css" type="text/css" rel="stylesheet">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-<preference name='phonegap-version' value='cli-5.1.1' />
+
 
 
 <!--js-->
@@ -63,9 +63,7 @@ button:focus{
 <video id="video1" width="1080" height="1920" autoplay style="background:#D3D3D3;">
 
  <source src="video/Comp1.mp4" type="video/mp4">
- <source src="/android_asset/www/video/Comp1.mp4"/>
-
-
+ <
 </video>
 
 
@@ -90,6 +88,14 @@ button:focus{
 		document.getElementById('dismiss_photo').style.visibility = 'visible';
 		document.getElementById('approve_photo').style.visibility = 'visible';
 	}
+	
+	
+	var video = document.getElementById('video1');
+video.addEventListener('click',function(){
+  video.play();
+},false);
+	
+	
 </script>
 
 </body>
