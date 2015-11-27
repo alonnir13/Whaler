@@ -6,6 +6,7 @@
     <js-module name="phonegap-googlemaps-plugin" src="www/googlemaps-cdv-plugin.js">
         <clobbers target="plugin.google.maps" />
     </js-module>
+	<plugin name="com.jaeger.html5video" spec="1.2.1" source="pgb" />
 
     
     <description>Google Maps native SDK for Android and iOS</description>
