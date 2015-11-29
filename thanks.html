@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="../whaler_webSite/css/reset.css" type="text/css" rel="stylesheet">
+
+<style>
+#wrapper{
+	width:1080px;
+	height:1920px;
+	background-color:#fff;
+	padding-top:370px;
+}
+
+
+#wrapper h1, #wrapper h2{
+	text-align:center;
+	font-size:3em;
+	margin-top:30px;
+	font-weight:bold;
+	color:#144150;
+}
+
+#bg{
+	width:1080px;
+	height:1005px;
+	background-image:url(images/thanks_bg.png);
+	background-repeat:no-repeat;
+	margin-top:530px;
+	position:absolute;
+	z-index:999;
+	padding-top:215px;
+}
+
+
+#whale{
+	position:absolute;
+	z-index:1;
+	top:800px;
+	left:320px;;
+}
+
+
+		#whale {
+	
+	animation:splash 1.5s ease-in-out infinite;
+	
+}
+
+@keyframes splash{
+	
+	0%{
+		transform: translateY(0px);
+	}
+	
+	50%{
+		transform: translateY(30px);
+	}
+	
+	100%{
+		transform: translateY(0px);
+	}
+	
+}
+
+.btn{
+	margin-left:82px;
+	
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+
+
+<div id="wrapper">
+
+<h1>Your board is now on whaler</h1>
+<h2>Thanks for posting!</h2>
+
+
+<div id="bg">
+
+<a class="btn" href="home.html"><img src="images/back_to_home.png" style="margin-bottom:30px;"></a>
+<a class="btn" href="home.html"><img src="images/edit_btn.png"></a>
+
+</div>
+
+
+<img id="whale" src="images/whale.png">
+
+
+
+
+</div>
+
+</body>
+</html>

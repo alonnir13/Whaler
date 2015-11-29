@@ -46,6 +46,64 @@ button:focus{
 	z-index:998;
 }
 
+#video1{
+	display:none;
+}
+
+
+		#moveing_pic {
+	
+	animation:move 6s ease-in-out;
+	
+}
+
+@keyframes move{
+	0%{ 
+	  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+30%{
+	
+	  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter: blur(12px);
+}
+
+
+60%{
+	
+	  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+80%{
+		  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+
+}
+
+	100%{ 
+	  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+}
+
 </style>
 
 </head>
@@ -70,7 +128,7 @@ button:focus{
  <source src="video/comp1.mp4" type="video/mp4">
  
 </video>
-<img id=""  src="images/cam_img.jpg" alt="">
+<img id="moveing_pic"  src="images/cam_img.jpg" alt="">
 
 
 </div>
