@@ -52,12 +52,14 @@ button:focus{
 
 
 		#moveing_pic {
+			
+			animation:move 6s ease-in-out;
 	
-	animation:move 6s ease-in-out;
+	-webkit-animation:move 6s ease-in-out;
 	
 }
 
-@keyframes move{
+@-webkit-keyframes move{
 	0%{ 
 	  -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
